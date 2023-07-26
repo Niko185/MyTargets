@@ -1,9 +1,9 @@
 package com.example.mytargets.domain
 
-class EditTargetUseCase {
+class EditTargetUseCase(private val targetRepository: TargetRepository) {
 
     fun editTarget(target: Target) {
-        TODO()
+        targetRepository.editTarget(target)
     }
 
 }
