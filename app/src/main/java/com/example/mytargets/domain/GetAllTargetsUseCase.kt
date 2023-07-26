@@ -1,9 +1,9 @@
 package com.example.mytargets.domain
 
-class GetAllTargetsUseCase {
+class GetAllTargetsUseCase(private val targetRepository: TargetRepository) {
 
     fun getAllTargets(): List<Target> {
-       TODO()
+       return targetRepository.getAllTargets()
     }
 
 }

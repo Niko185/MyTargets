@@ -1,8 +1,8 @@
 package com.example.mytargets.domain
 
-class AddTargetInListUseCase {
+class AddTargetInListUseCase(private val targetRepository: TargetRepository) {
 
     fun addTargetInList(target: Target) {
-        TODO()
+        targetRepository.addTarget(target)
     }
 }

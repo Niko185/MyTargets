@@ -1,8 +1,8 @@
 package com.example.mytargets.domain
 
-class GetTargetByIdUseCase {
+class GetTargetByIdUseCase(private val targetRepository: TargetRepository) {
 
     fun getTargetById(targetId: Int): Target {
-        TODO()
+       return targetRepository.getTargetById(targetId)
     }
 }
