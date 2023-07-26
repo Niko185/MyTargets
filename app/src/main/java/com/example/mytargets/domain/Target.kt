@@ -1,8 +1,12 @@
 package com.example.mytargets.domain
 
 data class Target(
-    val id: Int,
     val name: String,
     val dayForFinish: Int,
-    val isActive: Boolean
-)
+    val isActive: Boolean,
+    var id: Int = UNDEFINED_ID
+){
+    companion object {
+        const val UNDEFINED_ID = -1
+    }
+}
