@@ -1,5 +1,7 @@
 package com.example.mytargets.domain
 
+import androidx.lifecycle.LiveData
+
 interface TargetRepository {
 
     fun addTarget(target: Target)
@@ -8,7 +10,7 @@ interface TargetRepository {
 
     fun editTarget(target: Target)
 
-    fun getAllTargets(): List<Target>
+    fun getAllTargets(): LiveData<List<Target>>
 
     fun getTargetById(targetId: Int): Target
 

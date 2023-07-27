@@ -1,8 +1,10 @@
 package com.example.mytargets.domain
 
+import androidx.lifecycle.LiveData
+
 class GetAllTargetsUseCase(private val targetRepository: TargetRepository) {
 
-    fun getAllTargets(): List<Target> {
+    fun getAllTargets(): LiveData<List<Target>> {
        return targetRepository.getAllTargets()
     }
 
